@@ -116,6 +116,7 @@ func GoCrossCompile(opts *CompileOpts) error {
 		args = append(args, "-race")
 	}
 	args = append(args,
+		"-trimpath",
 		"-gcflags", opts.Gcflags,
 		"-ldflags", opts.Ldflags,
 		"-asmflags", opts.Asmflags,
